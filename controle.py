@@ -8,7 +8,10 @@ chave_api = os.getenv('OPIA_API_KEY')
 
 mensagens = [
     SystemMessage('Traduza o texto a seguir para inglês'), 
-    HumanMessage('Se inscrevam no canal para aprender Python')
+    HumanMessage('Olá, tudo bem?')
 ]
 
 modelo = ChatOpenAI(model='gpt-4o-mini')
+
+resposta = modelo.invoke(mensagens)
+print(resposta)
